@@ -1,0 +1,386 @@
+/* Animations avancées inspirées de l'exemple */
+
+/* Variables pour les animations */
+:root {
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --glow-color: #00f2fe;
+    --text-glow: 0 0 20px rgba(0, 242, 254, 0.5);
+    --box-glow: 0 0 40px rgba(0, 242, 254, 0.3);
+}
+
+/* Animation de fond avec particules */
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d2d5f 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+    animation: backgroundShift 10s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+    0% {
+        transform: translateX(-10px) translateY(-10px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(10px) translateY(10px);
+        opacity: 1;
+    }
+}
+
+/* Particules flottantes */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(0, 242, 254, 0.4), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 119, 198, 0.3), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(120, 219, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: particlesFloat 20s linear infinite;
+}
+
+@keyframes particlesFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+/* Photo de profil - ANIMATIONS SUPPRIMÉES */
+.profile-image {
+    position: relative;
+    border: 4px solid rgba(0, 242, 254, 0.8);
+    border-radius: 50%;
+    padding: 4px;
+    /* animation: profileGlow 3s ease-in-out infinite alternate; - SUPPRIMÉE */
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* @keyframes profileGlow - SUPPRIMÉE */
+
+/* Effet de halo autour de la photo - SUPPRIMÉ COMPLÈTEMENT */
+/* .hero-image::before - SUPPRIMÉ */
+
+/* @keyframes rotate - SUPPRIMÉE */
+
+/* Animation du texte principal */
+.hero-title {
+    background: linear-gradient(
+        45deg,
+        #fff 0%,
+        #00fed4da 25%,
+        #ff77c6 50%,
+        #78dbff 75%,
+        #fff 100%
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 4s ease-in-out infinite;
+    text-shadow: var(--text-glow);
+}
+
+@keyframes gradientText {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Animation du nom en surbrillance */
+.highlight {
+    position: relative;
+    display: inline-block;
+    animation: nameGlow 2s ease-in-out infinite alternate;
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    right: -10px;
+    bottom: -5px;
+    background: linear-gradient(45deg, transparent, rgba(0, 242, 254, 0.2), transparent);
+    border-radius: 10px;
+    z-index: -1;
+    animation: highlightPulse 3s ease-in-out infinite;
+}
+
+@keyframes nameGlow {
+    0% {
+        text-shadow: 
+            0 0 10px rgba(0, 242, 254, 0.8),
+            0 0 20px rgba(0, 242, 254, 0.6),
+            0 0 30px rgba(0, 242, 254, 0.4);
+    }
+    100% {
+        text-shadow: 
+            0 0 15px rgba(255, 119, 198, 0.8),
+            0 0 30px rgba(255, 119, 198, 0.6),
+            0 0 45px rgba(255, 119, 198, 0.4);
+    }
+}
+
+@keyframes highlightPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Animation des boutons avec effet néon */
+.btn-primary {
+    position: relative;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border: 2px solid transparent;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    box-shadow: 
+        0 0 20px rgba(102, 126, 234, 0.6),
+        0 0 40px rgba(102, 126, 234, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Animation des cartes de fonctionnalités */
+.feature-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(255, 119, 198, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+/* Animation de l'icône des fonctionnalités */
+.feature-icon {
+    background: var(--gradient-accent);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation d'apparition en cascade */
+.animate-cascade {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: cascadeIn 0.8s ease-out forwards;
+}
+
+.animate-cascade:nth-child(1) { animation-delay: 0.1s; }
+.animate-cascade:nth-child(2) { animation-delay: 0.2s; }
+.animate-cascade:nth-child(3) { animation-delay: 0.3s; }
+.animate-cascade:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes cascadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation du texte qui s'écrit */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid rgba(0, 242, 254, 0.8);
+    white-space: nowrap;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgba(0, 242, 254, 0.8);
+    }
+}
+
+/* Animation des statistiques qui comptent */
+.stat-number {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: statGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes statGlow {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(1.3);
+    }
+}
+
+/* Effet de survol sur les liens de navigation */
+.main-nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-accent);
+    transition: left 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    left: 0;
+}
+
+/* Animation de chargement */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 242, 254, 0.3);
+    border-top: 4px solid #00f2fe;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive pour les animations */
+@media (max-width: 768px) {
+    .hero::after {
+        background-size: 100px 50px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .typewriter {
+        animation: typing 2s steps(20, end);
+    }
+}
+
+/* Réduction des animations pour les utilisateurs qui préfèrent moins de mouvement */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+

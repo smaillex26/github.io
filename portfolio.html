@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ismail ALAMI</title>
+    <meta name="description" content="Découvrez mes projets de développement web et applications">
+    <meta name="author" content="Ismail ALAMI">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html">Ismail ALAMI</a></h1>
+                    <p class="tagline">Développeur Full-Stack</p>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">
+                            <i class="fas fa-home"></i> Accueil
+                        </a></li>
+                        <li><a href="about.html">
+                            <i class="fas fa-user"></i> À propos
+                        </a></li>
+                        <li><a href="portfolio.html" class="active">
+                            <i class="fas fa-briefcase"></i> Portfolio
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1 class="page-title">Mes Projets</h1>
+                    <p class="page-subtitle">Découvrez mes réalisations en développement web et applications</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-filters">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="java">Java</button>
+                    <button class="filter-btn" data-filter="ai">Stage</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-grid">
+            <div class="container">
+                <div class="projects-container">
+                    <!-- Projet 1 -->
+                    <div class="project-card" data-category="java">
+                        <div class="project-gallery" data-project="biblio">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\{266F7054-2E91-4C35-BADC-6577E8A77F36}.png" alt="BIBLIO - Interface principale" class="active">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\{75C31AF1-9950-4CA5-967F-3FA6C2844421}.png" alt="BIBLIO - Gestion des livres">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\{84A21DF3-24D5-4802-BEE0-44ACA64D0588}.png" alt="BIBLIO - Base de données">
+                            
+                            <!-- Navigation de la galerie -->
+                            <button class="gallery-arrow prev" onclick="changeImage('biblio', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('biblio', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <!-- Points de navigation -->
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('biblio', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('biblio', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('biblio', 2)"></span>
+                            </div>
+                            
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('biblio')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">BIBLIO</h3>
+                                <span class="project-status status-terminé">Terminé</span>
+                            </div>
+                            <p class="project-description">Système de gestion de bibliothèque développé en Java avec MySQL. Utilise des patrons de conception avancés pour une architecture robuste et maintenable.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">JDBC</span>
+                                <span class="tech-tag">Design Patterns</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Mai 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div class="project-card" data-category="java">
+                        <div class="project-gallery" data-project="boldair">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\logo_run_play.PNG" alt="Boldair - Interface principale" class="active">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\inscrire.png" alt="Boldair - Gestion des comptes">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\dashboard.png" alt="Boldair - Dashboard">
+                            
+                            <!-- Navigation de la galerie -->
+                            <button class="gallery-arrow prev" onclick="changeImage('boldair', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('boldair', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <!-- Points de navigation -->
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('boldair', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('boldair', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('boldair', 2)"></span>
+                            </div>
+                            
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('boldair')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Boldair</h3>
+                                <span class="project-status status-terminé">Terminé</span>
+                            </div>
+                            <p class="project-description">Application web de gestion avec Spring Boot et Spring Security. Gestion de comptes, personnes et stocks avec authentification sécurisée.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Spring Security</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Juin 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-gallery" data-project="portfolio">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png" alt="Portfolio - Page d'accueil" class="active">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\{539D0F1D-3B03-4035-8882-BD50518E02AF}.png" alt="Portfolio - Page projets">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png" alt="Portfolio - Page à propos">
+                            
+                            <!-- Navigation de la galerie -->
+                            <button class="gallery-arrow prev" onclick="changeImage('portfolio', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('portfolio', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <!-- Points de navigation -->
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('portfolio', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('portfolio', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('portfolio', 2)"></span>
+                            </div>
+                            
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('portfolio')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Portfolio Personnel</h3>
+                                <span class="project-status status-terminé">Terminé</span>
+                            </div>
+                            <p class="project-description">Portfolio personnel développé en HTML, CSS et JavaScript. Design moderne et responsive avec animations fluides.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Juin 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 4 -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-gallery" data-project="Stage">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\piecolor.jpg" alt="Stage - Interface Stage" class="active">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\cuir_semi_anniline.jpg" alt="Stage - Génération de contenu">
+                            <img src="C:\Users\hp\Videos\portfolio_html_css\assets\images\cuir_grênné.jpg" alt="Stage - Résultats">
+                            
+                            <!-- Navigation de la galerie -->
+                            <button class="gallery-arrow prev" onclick="changeImage('Stage', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('Stage', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            
+                            <!-- Points de navigation -->
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('Stage', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('Stage', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('Stage', 2)"></span>
+                            </div>
+                            
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('Stage')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Stage</h3>
+                                <span class="project-status status-évolution">En cours</span>
+                            </div>
+                            <p class="project-description">Stage dans une entreprise de production de cuir.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Juillet 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Intéressé par mon travail ?</h2>
+                    <p>N'hésitez pas à me contacter pour discuter de vos projets ou opportunités de collaboration</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alami.ism26@gmail.com" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-envelope"></i> Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> alami.ism26@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Toulouse, France</p>
+                    <p><i class="fas fa-graduation-cap"></i> EPSI</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Compétences</h3>
+                    <ul>
+                        <li>Développement Web (PHP, JavaScript)</li>
+                        <li>Programmation Java</li>
+                        <li>Base de données (MySQL)</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ismail-alami-63116734a" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Statistiques</h3>
+                    <p><i class="fas fa-eye"></i> Visites: 1</p>
+                    <p><i class="fas fa-clock"></i> Dernière visite: 08/08/2025 13:45</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ismail ALAMI. Tous droits réservés.</p>
+                <p>Développé avec  HTML/CSS et JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Variables globales pour la galerie
+        const galleryStates = {};
+
+        // Initialisation des galeries
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialiser les états des galeries
+            document.querySelectorAll('.project-gallery').forEach(gallery => {
+                const projectId = gallery.getAttribute('data-project');
+                galleryStates[projectId] = {
+                    currentIndex: 0,
+                    totalImages: gallery.querySelectorAll('img').length
+                };
+            });
+
+            // Filtrage des projets
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Active le bouton cliqué
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    const projects = document.querySelectorAll('.project-card');
+                    
+                    projects.forEach(project => {
+                        if (filter === 'all' || project.getAttribute('data-category') === filter) {
+                            project.style.display = 'block';
+                        } else {
+                            project.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Fonction pour changer d'image dans la galerie
+        function changeImage(projectId, direction) {
+            const state = galleryStates[projectId];
+            const gallery = document.querySelector(`[data-project="${projectId}"]`);
+            
+            if (!state || !gallery) return;
+
+            // Calculer le nouvel index
+            let newIndex = state.currentIndex + direction;
+            if (newIndex < 0) newIndex = state.totalImages - 1;
+            if (newIndex >= state.totalImages) newIndex = 0;
+
+            // Mettre à jour l'image active
+            updateGallery(projectId, newIndex);
+        }
+
+        // Fonction pour aller directement à une image
+        function goToImage(projectId, index) {
+            updateGallery(projectId, index);
+        }
+
+        // Fonction pour mettre à jour la galerie
+        function updateGallery(projectId, newIndex) {
+            const state = galleryStates[projectId];
+            const gallery = document.querySelector(`[data-project="${projectId}"]`);
+            
+            if (!state || !gallery) return;
+
+            // Masquer l'image actuelle
+            const currentImage = gallery.querySelector('img.active');
+            if (currentImage) currentImage.classList.remove('active');
+
+            // Afficher la nouvelle image
+            const images = gallery.querySelectorAll('img');
+            if (images[newIndex]) {
+                images[newIndex].classList.add('active');
+            }
+
+            // Mettre à jour les points de navigation
+            const dots = gallery.querySelectorAll('.gallery-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === newIndex);
+            });
+
+            // Mettre à jour l'état
+            state.currentIndex = newIndex;
+        }
+
+        // Fonction pour afficher les détails du projet
+        function showProjectDetails(projectId) {
+            const projectData = {
+                biblio: {
+                    title: "BIBLIO - Système de Gestion de Bibliothèque",
+                    description: "Un système complet de gestion de bibliothèque développé en Java, utilisant des patrons de conception avancés pour une architecture robuste et maintenable. Connecté à une base de données MySQL locale.",
+                    features: [
+                        "Gestion des livres et des emprunteurs",
+                        "Système de recherche avancé",
+                        "Gestion des retards et pénalités",
+                        "Interface utilisateur intuitive",
+                        "Architecture MVC avec Design Patterns"
+                    ],
+                    technologies: ["Java", "JDBC", "MySQL", "Design Patterns", "Swing"],
+                    date: "Juillet 2025",
+                    status: "Terminé",
+                    images: [
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\{266F7054-2E91-4C35-BADC-6577E8A77F36}.png",
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\{75C31AF1-9950-4CA5-967F-3FA6C2844421}.png",
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\{84A21DF3-24D5-4802-BEE0-44ACA64D0588}.png"
+                    ]
+                },
+                boldair: {
+                    title: "Boldair - Application Web de Gestion",
+                    description: "Application web développée avec Spring Boot pour la gestion de comptes, personnes et stocks avec un système d'authentification sécurisé. Utilise Spring Data JPA pour la persistance des données.",
+                    features: [
+                        "Gestion des comptes utilisateurs",
+                        "Système d'authentification sécurisé",
+                        "Gestion des personnes et stocks",
+                        "Interface web responsive",
+                        "API REST avec Spring Boot"
+                    ],
+                    technologies: ["Java", "Spring Boot", "Spring Security","MySQL",],
+                    date: "Juin 2025",
+                    status: "Terminé",
+                    images: [
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\logo_run_play.PNG",
+                            "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\inscrire.png",
+                            "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\dashboard.png"
+                    ]
+                },
+                portfolio: {
+                    title: "Portfolio Personnel",
+                    description: "Portfolio personnel développé en HTML, CSS et JavaScript. Design moderne et responsive avec animations fluides et une expérience utilisateur optimale.",
+                    features: [
+                        "Design responsive et moderne",
+                        "Animations fluides",
+                        "Galerie de projets interactive",
+                        "Navigation intuitive",
+                        "Optimisé pour tous les appareils"
+                    ],
+                    technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome", "Google Fonts"],
+                    date: "Juillet 2025",
+                    status: "Terminé",
+                    images: [
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png",
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\{539D0F1D-3B03-4035-8882-BD50518E02AF}.png",
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png"
+                    ]
+                },
+                Stage: {
+                    title: "Stage -  Cuir",
+                    description: "Stage dans une entreprise de production de cuir",
+                    features: [
+                        "Génération de contenu créatif",
+                        "Modèles de machine learning",
+                        "Interface utilisateur intuitive",
+                        "Traitement de données avancé",
+                        "Résultats personnalisés"
+                    ],
+                    technologies: ["Python", "TensorFlow", "Machine Learning", "NumPy", "Pandas"],
+                    date: "En cours",
+                    status: "En cours",
+                    images: [
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\piecolor.jpg",
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\cuir_semi_anniline.jpg",
+                        "C:\\Users\\hp\\Videos\\portfolio_html_css\\assets\\images\\cuir_grênné.jpg"
+                    ]
+                }
+            };
+
+            const project = projectData[projectId];
+            if (!project) return;
+
+            // Créer une modal avec les détails et galerie d'images
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.style.display = 'block';
+            modal.innerHTML = `
+                <div class="modal-content modal-large">
+                    <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+                    
+                    <!-- Galerie d'images -->
+                    <div class="modal-gallery" data-modal-project="${projectId}">
+                        ${project.images.map((img, index) => 
+                            `<img src="${img}" alt="${project.title} - Image ${index + 1}" class="${index === 0 ? 'active' : ''}">`
+                        ).join('')}
+                        
+                        <!-- Navigation de la galerie -->
+                        <button class="modal-gallery-arrow prev" onclick="changeModalImage('${projectId}', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="modal-gallery-arrow next" onclick="changeModalImage('${projectId}', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Points de navigation -->
+                        <div class="modal-gallery-nav">
+                            ${project.images.map((img, index) => 
+                                `<span class="modal-gallery-dot ${index === 0 ? 'active' : ''}" onclick="goToModalImage('${projectId}', ${index})"></span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    
+                    <!-- Informations du projet -->
+                    <div class="modal-project-info">
+                        <h2>${project.title}</h2>
+                        <div class="modal-project-meta">
+                            <span class="project-status status-${project.status.toLowerCase()}">${project.status}</span>
+                            <span class="project-date"><i class="far fa-calendar-alt"></i> ${project.date}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fas fa-info-circle"></i> Description</h3>
+                        <p>${project.description}</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3><i class="fas fa-list"></i> Fonctionnalités</h3>
+                        <ul class="features-list">
+                            ${project.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h3><i class="fas fa-code"></i> Technologies utilisées</h3>
+                        <div class="modal-technologies">
+                            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+
+            // Fermer la modal en cliquant à l'extérieur
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+
+            // Initialiser l'état de la galerie modal
+            const modalGalleryStates = {};
+            modalGalleryStates[projectId] = {
+                currentIndex: 0,
+                totalImages: project.images.length
+            };
+            window.modalGalleryStates = modalGalleryStates;
+        }
+
+        // Fonction pour changer d'image dans la modal
+        function changeModalImage(projectId, direction) {
+            const state = window.modalGalleryStates[projectId];
+            const modalGallery = document.querySelector(`[data-modal-project="${projectId}"]`);
+            
+            if (!state || !modalGallery) return;
+
+            // Calculer le nouvel index
+            let newIndex = state.currentIndex + direction;
+            if (newIndex < 0) newIndex = state.totalImages - 1;
+            if (newIndex >= state.totalImages) newIndex = 0;
+
+            // Mettre à jour l'image active
+            updateModalGallery(projectId, newIndex);
+        }
+
+        // Fonction pour aller directement à une image dans la modal
+        function goToModalImage(projectId, index) {
+            updateModalGallery(projectId, index);
+        }
+
+        // Fonction pour mettre à jour la galerie modal
+        function updateModalGallery(projectId, newIndex) {
+            const state = window.modalGalleryStates[projectId];
+            const modalGallery = document.querySelector(`[data-modal-project="${projectId}"]`);
+            
+            if (!state || !modalGallery) return;
+
+            // Masquer l'image actuelle
+            const currentImage = modalGallery.querySelector('img.active');
+            if (currentImage) currentImage.classList.remove('active');
+
+            // Afficher la nouvelle image
+            const images = modalGallery.querySelectorAll('img');
+            if (images[newIndex]) {
+                images[newIndex].classList.add('active');
+            }
+
+            // Mettre à jour les points de navigation
+            const dots = modalGallery.querySelectorAll('.modal-gallery-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === newIndex);
+            });
+
+            // Mettre à jour l'état
+            state.currentIndex = newIndex;
+        }
+    </script>
+</body>
+</html>
