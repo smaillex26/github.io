@@ -67,31 +67,31 @@
         <section class="portfolio-grid">
             <div class="container">
                 <div class="projects-container">
-                    <!-- Projet 1 -->
-                    <div class="project-card" data-category="java">
-                        <div class="project-gallery" data-project="biblio">
-                            <img src="assets\images\{266F7054-2E91-4C35-BADC-6577E8A77F36}.png" alt="BIBLIO - Interface principale" class="active">
-                            <img src="assets\images\{75C31AF1-9950-4CA5-967F-3FA6C2844421}.png" alt="BIBLIO - Gestion des livres">
-                            <img src="assets\images\{84A21DF3-24D5-4802-BEE0-44ACA64D0588}.png" alt="BIBLIO - Base de données">
-                            
+                    <!-- Projet 1 - Tisseo (Janvier 2026) -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-gallery" data-project="tisseo">
+                            <img src="assets/images/image (1).png" alt="Tisseo - Dashboard" class="active">
+                            <img src="assets/images/image (2).png" alt="Tisseo - Carte interactive">
+                            <img src="assets/images/inscription_page.png" alt="Tisseo - Page inscription">
+
                             <!-- Navigation de la galerie -->
-                            <button class="gallery-arrow prev" onclick="changeImage('biblio', -1)">
+                            <button class="gallery-arrow prev" onclick="changeImage('tisseo', -1)">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
-                            <button class="gallery-arrow next" onclick="changeImage('biblio', 1)">
+                            <button class="gallery-arrow next" onclick="changeImage('tisseo', 1)">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <!-- Points de navigation -->
                             <div class="gallery-nav">
-                                <span class="gallery-dot active" onclick="goToImage('biblio', 0)"></span>
-                                <span class="gallery-dot" onclick="goToImage('biblio', 1)"></span>
-                                <span class="gallery-dot" onclick="goToImage('biblio', 2)"></span>
+                                <span class="gallery-dot active" onclick="goToImage('tisseo', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('tisseo', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('tisseo', 2)"></span>
                             </div>
-                            
+
                             <div class="project-overlay">
                                 <div class="project-actions">
-                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('biblio')">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('tisseo')">
                                         <i class="fas fa-eye"></i> Voir détails
                                     </a>
                                 </div>
@@ -99,28 +99,76 @@
                         </div>
                         <div class="project-content">
                             <div class="project-header">
-                                <h3 class="project-title">BIBLIO</h3>
+                                <h3 class="project-title">Tisseo - Réseau Transport</h3>
                                 <span class="project-status status-terminé">Terminé</span>
                             </div>
-                            <p class="project-description">Système de gestion de bibliothèque développé en Java avec MySQL. Utilise des patrons de conception avancés pour une architecture robuste et maintenable.</p>
+                            <p class="project-description">Application web full-stack pour visualiser le réseau de transport Tisseo via un dashboard interactif et une carte cartographique Leaflet.</p>
                             <div class="project-technologies">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">JDBC</span>
-                                <span class="tech-tag">Design Patterns</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Leaflet</span>
                             </div>
                             <div class="project-meta">
-                                <span class="project-date"><i class="far fa-calendar-alt"></i> Mai 2025</span>
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Janvier 2026</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Projet 2 -->
+                    <!-- Projet 2 - Stage (Juillet 2025) -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-gallery" data-project="Stage">
+                            <img src="assets/images/piecolor.jpg" alt="Stage - Interface Stage" class="active">
+                            <img src="assets/images/cuir_semi_anniline.jpg" alt="Stage - Génération de contenu">
+                            <img src="assets/images/cuir_grênné.jpg" alt="Stage - Résultats">
+
+                            <!-- Navigation de la galerie -->
+                            <button class="gallery-arrow prev" onclick="changeImage('Stage', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('Stage', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Points de navigation -->
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('Stage', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('Stage', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('Stage', 2)"></span>
+                            </div>
+
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('Stage')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Stage</h3>
+                                <span class="project-status status-terminé">Terminé</span>
+                            </div>
+                            <p class="project-description">Stage dans une entreprise de production de cuir.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Juillet 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 - Boldair (Juin 2025) -->
                     <div class="project-card" data-category="java">
                         <div class="project-gallery" data-project="boldair">
-                            <img src="assets\images\logo_run_play.PNG" alt="Boldair - Interface principale" class="active">
-                            <img src="assets\images\inscrire.png" alt="Boldair - Gestion des comptes">
-                            <img src="assets\images\dashboard.png" alt="Boldair - Dashboard">
-                            
+                            <img src="assets/images/logo_run_play.PNG" alt="Boldair - Interface principale" class="active">
+                            <img src="assets/images/inscrire.png" alt="Boldair - Gestion des comptes">
+                            <img src="assets/images/dashboard.png" alt="Boldair - Dashboard">
+
                             <!-- Navigation de la galerie -->
                             <button class="gallery-arrow prev" onclick="changeImage('boldair', -1)">
                                 <i class="fas fa-chevron-left"></i>
@@ -128,14 +176,14 @@
                             <button class="gallery-arrow next" onclick="changeImage('boldair', 1)">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <!-- Points de navigation -->
                             <div class="gallery-nav">
                                 <span class="gallery-dot active" onclick="goToImage('boldair', 0)"></span>
                                 <span class="gallery-dot" onclick="goToImage('boldair', 1)"></span>
                                 <span class="gallery-dot" onclick="goToImage('boldair', 2)"></span>
                             </div>
-                            
+
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="#" class="btn btn-primary" onclick="showProjectDetails('boldair')">
@@ -161,13 +209,13 @@
                         </div>
                     </div>
 
-                    <!-- Projet 3 -->
+                    <!-- Projet 4 - Portfolio (Juin 2025) -->
                     <div class="project-card" data-category="web">
                         <div class="project-gallery" data-project="portfolio">
-                            <img src="assets\images\{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png" alt="Portfolio - Page d'accueil" class="active">
-                            <img src="assets\images\{539D0F1D-3B03-4035-8882-BD50518E02AF}.png" alt="Portfolio - Page projets">
-                            <img src="assets\images\{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png" alt="Portfolio - Page à propos">
-                            
+                            <img src="assets/images/{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png" alt="Portfolio - Page d'accueil" class="active">
+                            <img src="assets/images/{539D0F1D-3B03-4035-8882-BD50518E02AF}.png" alt="Portfolio - Page projets">
+                            <img src="assets/images/{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png" alt="Portfolio - Page à propos">
+
                             <!-- Navigation de la galerie -->
                             <button class="gallery-arrow prev" onclick="changeImage('portfolio', -1)">
                                 <i class="fas fa-chevron-left"></i>
@@ -175,14 +223,14 @@
                             <button class="gallery-arrow next" onclick="changeImage('portfolio', 1)">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <!-- Points de navigation -->
                             <div class="gallery-nav">
                                 <span class="gallery-dot active" onclick="goToImage('portfolio', 0)"></span>
                                 <span class="gallery-dot" onclick="goToImage('portfolio', 1)"></span>
                                 <span class="gallery-dot" onclick="goToImage('portfolio', 2)"></span>
                             </div>
-                            
+
                             <div class="project-overlay">
                                 <div class="project-actions">
                                     <a href="#" class="btn btn-primary" onclick="showProjectDetails('portfolio')">
@@ -208,31 +256,31 @@
                         </div>
                     </div>
 
-                    <!-- Projet 4 -->
-                    <div class="project-card" data-category="ai">
-                        <div class="project-gallery" data-project="Stage">
-                            <img src="assets\images\piecolor.jpg" alt="Stage - Interface Stage" class="active">
-                            <img src="assets\images\cuir_semi_anniline.jpg" alt="Stage - Génération de contenu">
-                            <img src="assets\images\cuir_grênné.jpg" alt="Stage - Résultats">
-                            
+                    <!-- Projet 5 - BIBLIO (Mai 2025) -->
+                    <div class="project-card" data-category="java">
+                        <div class="project-gallery" data-project="biblio">
+                            <img src="assets/images/{266F7054-2E91-4C35-BADC-6577E8A77F36}.png" alt="BIBLIO - Interface principale" class="active">
+                            <img src="assets/images/{75C31AF1-9950-4CA5-967F-3FA6C2844421}.png" alt="BIBLIO - Gestion des livres">
+                            <img src="assets/images/{84A21DF3-24D5-4802-BEE0-44ACA64D0588}.png" alt="BIBLIO - Base de données">
+
                             <!-- Navigation de la galerie -->
-                            <button class="gallery-arrow prev" onclick="changeImage('Stage', -1)">
+                            <button class="gallery-arrow prev" onclick="changeImage('biblio', -1)">
                                 <i class="fas fa-chevron-left"></i>
                             </button>
-                            <button class="gallery-arrow next" onclick="changeImage('Stage', 1)">
+                            <button class="gallery-arrow next" onclick="changeImage('biblio', 1)">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
-                            
+
                             <!-- Points de navigation -->
                             <div class="gallery-nav">
-                                <span class="gallery-dot active" onclick="goToImage('Stage', 0)"></span>
-                                <span class="gallery-dot" onclick="goToImage('Stage', 1)"></span>
-                                <span class="gallery-dot" onclick="goToImage('Stage', 2)"></span>
+                                <span class="gallery-dot active" onclick="goToImage('biblio', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('biblio', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('biblio', 2)"></span>
                             </div>
-                            
+
                             <div class="project-overlay">
                                 <div class="project-actions">
-                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('Stage')">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('biblio')">
                                         <i class="fas fa-eye"></i> Voir détails
                                     </a>
                                 </div>
@@ -240,17 +288,17 @@
                         </div>
                         <div class="project-content">
                             <div class="project-header">
-                                <h3 class="project-title">Stage</h3>
-                                <span class="project-status status-évolution">En cours</span>
+                                <h3 class="project-title">BIBLIO</h3>
+                                <span class="project-status status-terminé">Terminé</span>
                             </div>
-                            <p class="project-description">Stage dans une entreprise de production de cuir.</p>
+                            <p class="project-description">Système de gestion de bibliothèque développé en Java avec MySQL. Utilise des patrons de conception avancés pour une architecture robuste et maintenable.</p>
                             <div class="project-technologies">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">JDBC</span>
+                                <span class="tech-tag">Design Patterns</span>
                             </div>
                             <div class="project-meta">
-                                <span class="project-date"><i class="far fa-calendar-alt"></i> Juillet 2025</span>
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Mai 2025</span>
                             </div>
                         </div>
                     </div>
@@ -415,9 +463,9 @@
                     date: "Juillet 2025",
                     status: "Terminé",
                     images: [
-                        "assets\\images\\{266F7054-2E91-4C35-BADC-6577E8A77F36}.png",
-                        "assets\\images\\{75C31AF1-9950-4CA5-967F-3FA6C2844421}.png",
-                        "assets\\images\\{84A21DF3-24D5-4802-BEE0-44ACA64D0588}.png"
+                        "assets/images/{266F7054-2E91-4C35-BADC-6577E8A77F36}.png",
+                        "assets/images/{75C31AF1-9950-4CA5-967F-3FA6C2844421}.png",
+                        "assets/images/{84A21DF3-24D5-4802-BEE0-44ACA64D0588}.png"
                     ]
                 },
                 boldair: {
@@ -434,9 +482,9 @@
                     date: "Juin 2025",
                     status: "Terminé",
                     images: [
-                            "assets\\images\\logo_run_play.PNG",
-                            "assets\\images\\inscrire.png",
-                            "assets\\images\\dashboard.png"
+                        "assets/images/logo_run_play.PNG",
+                        "assets/images/inscrire.png",
+                        "assets/images/dashboard.png"
                     ]
                 },
                 portfolio: {
@@ -453,9 +501,28 @@
                     date: "Juillet 2025",
                     status: "Terminé",
                     images: [
-                        "assets\\images\\{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png",
-                        "assets\\images\\{539D0F1D-3B03-4035-8882-BD50518E02AF}.png",
-                        "assets\\images\\{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png"
+                        "assets/images/{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png",
+                        "assets/images/{539D0F1D-3B03-4035-8882-BD50518E02AF}.png",
+                        "assets/images/{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png"
+                    ]
+                },
+                tisseo: {
+                    title: "Tisseo - Visualisation du Réseau de Transport",
+                    description: "Application web full-stack permettant de visualiser et explorer le réseau de transport Tisseo via une interface moderne combinant dashboard interactif et carte cartographique. Architecture complète avec React, Express.js, PostgreSQL et Leaflet.",
+                    features: [
+                        "Dashboard interactif en page d'accueil",
+                        "Carte globale du réseau avec Leaflet",
+                        "Pages dédiées par ligne de transport",
+                        "API REST pour la gestion des données",
+                        "Système d'authentification sécurisé"
+                    ],
+                    technologies: ["React.js", "Node.js", "Express.js", "PostgreSQL", "Leaflet", "API REST"],
+                    date: "Janvier 2026",
+                    status: "Terminé",
+                    images: [
+                        "assets/images/image (1).png",
+                        "assets/images/image (2).png",
+                        "assets/images/inscription_page.png"
                     ]
                 },
                 Stage: {
@@ -472,9 +539,9 @@
                     date: "En cours",
                     status: "En cours",
                     images: [
-                        "assets\\images\\piecolor.jpg",
-                        "assets\\images\\cuir_semi_anniline.jpg",
-                        "assets\\images\\cuir_grênné.jpg"
+                        "assets/images/piecolor.jpg",
+                        "assets/images/cuir_semi_anniline.jpg",
+                        "assets/images/cuir_grênné.jpg"
                     ]
                 }
             };
