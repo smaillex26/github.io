@@ -115,6 +115,54 @@
                         </div>
                     </div>
 
+                    <!-- Projet - Site vitrine cabinet dentaire (Avril 2026) -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-gallery" data-project="dentaire">
+                            <img src="assets/images/dentaire-accueil.png" alt="Cabinet dentaire - Page d'accueil" class="active">
+                            <img src="assets/images/dentaire-services.png" alt="Cabinet dentaire - Page services">
+                            <img src="assets/images/dentaire-link.png" alt="Cabinet dentaire - Page liens (QR)">
+                            <img src="assets/images/dentaire-qrcode.png" alt="Cabinet dentaire - QR code personnalisé">
+
+                            <button class="gallery-arrow prev" onclick="changeImage('dentaire', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('dentaire', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('dentaire', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('dentaire', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('dentaire', 2)"></span>
+                                <span class="gallery-dot" onclick="goToImage('dentaire', 3)"></span>
+                            </div>
+
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('dentaire')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Site vitrine — Cabinet dentaire</h3>
+                                <span class="project-status status-terminé">Terminé</span>
+                            </div>
+                            <p class="project-description">Site vitrine pour un cabinet de chirurgie-dentiste : accueil avec hero et prise de RDV, page services avec filtres et cartes, et page « liens » mobile après scan d’un QR code (Instagram ou site principal).</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Avril 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Projet 2 - Stage (Juillet 2025) -->
                     <div class="project-card" data-category="ai">
                         <div class="project-gallery" data-project="Stage">
@@ -209,54 +257,7 @@
                         </div>
                     </div>
 
-                    <!-- Projet 4 - Portfolio (Juin 2025) -->
-                    <div class="project-card" data-category="web">
-                        <div class="project-gallery" data-project="portfolio">
-                            <img src="assets/images/{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png" alt="Portfolio - Page d'accueil" class="active">
-                            <img src="assets/images/{539D0F1D-3B03-4035-8882-BD50518E02AF}.png" alt="Portfolio - Page projets">
-                            <img src="assets/images/{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png" alt="Portfolio - Page à propos">
-
-                            <!-- Navigation de la galerie -->
-                            <button class="gallery-arrow prev" onclick="changeImage('portfolio', -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-arrow next" onclick="changeImage('portfolio', 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-
-                            <!-- Points de navigation -->
-                            <div class="gallery-nav">
-                                <span class="gallery-dot active" onclick="goToImage('portfolio', 0)"></span>
-                                <span class="gallery-dot" onclick="goToImage('portfolio', 1)"></span>
-                                <span class="gallery-dot" onclick="goToImage('portfolio', 2)"></span>
-                            </div>
-
-                            <div class="project-overlay">
-                                <div class="project-actions">
-                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('portfolio')">
-                                        <i class="fas fa-eye"></i> Voir détails
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Portfolio Personnel</h3>
-                                <span class="project-status status-terminé">Terminé</span>
-                            </div>
-                            <p class="project-description">Portfolio personnel développé en HTML, CSS et JavaScript. Design moderne et responsive avec animations fluides.</p>
-                            <div class="project-technologies">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                            <div class="project-meta">
-                                <span class="project-date"><i class="far fa-calendar-alt"></i> Juin 2025</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projet 5 - BIBLIO (Mai 2025) -->
+                    <!-- Projet 4 - BIBLIO (Mai 2025) -->
                     <div class="project-card" data-category="java">
                         <div class="project-gallery" data-project="biblio">
                             <img src="assets/images/{266F7054-2E91-4C35-BADC-6577E8A77F36}.png" alt="BIBLIO - Interface principale" class="active">
@@ -487,23 +488,24 @@
                         "assets/images/dashboard.png"
                     ]
                 },
-                portfolio: {
-                    title: "Portfolio Personnel",
-                    description: "Portfolio personnel développé en HTML, CSS et JavaScript. Design moderne et responsive avec animations fluides et une expérience utilisateur optimale.",
+                dentaire: {
+                    title: "Site vitrine — Cabinet dentaire",
+                    description: "Réalisation pour un proche : identité visuelle médicale (teal, bleu nuit, blanc), navigation claire et appels à l’action (prise de RDV). La page services présente les spécialités avec barre de filtres et cartes. Une page dédiée type « link in bio », pensée pour le mobile, s’ouvre après scan d’un QR code et oriente vers Instagram ou le site complet.",
                     features: [
-                        "Design responsive et moderne",
-                        "Animations fluides",
-                        "Galerie de projets interactive",
-                        "Navigation intuitive",
-                        "Optimisé pour tous les appareils"
+                        "Page d’accueil avec hero, overlay et boutons d’action",
+                        "Page services : filtres par type de soins et mise en avant des offres",
+                        "Landing QR : choix Instagram / site web, optimisée petit écran",
+                        "QR code personnalisé aux couleurs du cabinet",
+                        "Design responsive et cohérent avec la charte du cabinet"
                     ],
-                    technologies: ["HTML5", "CSS3", "JavaScript", "Font Awesome", "Google Fonts"],
-                    date: "Juillet 2025",
+                    technologies: ["HTML5", "CSS3", "JavaScript", "Design UI", "Mobile-first"],
+                    date: "Avril 2026",
                     status: "Terminé",
                     images: [
-                        "assets/images/{B6FBF9F0-937D-4837-8EC8-2BA6EBCCB76A}.png",
-                        "assets/images/{539D0F1D-3B03-4035-8882-BD50518E02AF}.png",
-                        "assets/images/{B6CB19BF-75C4-4E40-94B9-F0F9936A2995}.png"
+                        "assets/images/dentaire-accueil.png",
+                        "assets/images/dentaire-services.png",
+                        "assets/images/dentaire-link.png",
+                        "assets/images/dentaire-qrcode.png"
                     ]
                 },
                 tisseo: {
