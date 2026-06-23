@@ -59,7 +59,7 @@
                     <button class="filter-btn active" data-filter="all">Tous</button>
                     <button class="filter-btn" data-filter="web">Web</button>
                     <button class="filter-btn" data-filter="java">Java</button>
-                    <button class="filter-btn" data-filter="ai">Stage</button>
+                    <button class="filter-btn" data-filter="ai">IA / Stage</button>
                 </div>
             </div>
         </section>
@@ -67,6 +67,65 @@
         <section class="portfolio-grid">
             <div class="container">
                 <div class="projects-container">
+                    <!-- Projet - HealthAI Coach (Février 2026 - Juin 2026) -->
+                    <div class="project-card" data-category="ai">
+                        <div class="project-gallery" data-project="healthai">
+                            <img src="assets/images/Health_AI_Coach/dashboard_grille.png" alt="HealthAI Coach - Dashboard grille" class="active">
+                            <img src="assets/images/Health_AI_Coach/dashboard_liste.png" alt="HealthAI Coach - Dashboard liste">
+                            <img src="assets/images/Health_AI_Coach/dashboard_user.png" alt="HealthAI Coach - Dashboard utilisateur">
+                            <img src="assets/images/Health_AI_Coach/nutrition_user.png" alt="HealthAI Coach - Nutrition utilisateur">
+                            <img src="assets/images/Health_AI_Coach/entrainement_user.png" alt="HealthAI Coach - Entraînement utilisateur">
+                            <img src="assets/images/Health_AI_Coach/exercices.png" alt="HealthAI Coach - Exercices">
+                            <img src="assets/images/Health_AI_Coach/tendance_user.png" alt="HealthAI Coach - Tendances santé">
+                            <img src="assets/images/Health_AI_Coach/supabase-schema-tvfqosrefzpvekamitem.png" alt="HealthAI Coach - Schéma base de données">
+                            <img src="assets/images/Health_AI_Coach/trello.png" alt="HealthAI Coach - Organisation Trello">
+
+                            <button class="gallery-arrow prev" onclick="changeImage('healthai', -1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="gallery-arrow next" onclick="changeImage('healthai', 1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+
+                            <div class="gallery-nav">
+                                <span class="gallery-dot active" onclick="goToImage('healthai', 0)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 1)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 2)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 3)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 4)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 5)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 6)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 7)"></span>
+                                <span class="gallery-dot" onclick="goToImage('healthai', 8)"></span>
+                            </div>
+
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary" onclick="showProjectDetails('healthai')">
+                                        <i class="fas fa-eye"></i> Voir détails
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">HealthAI Coach - Application IA de santé personnalisée</h3>
+                                <span class="project-status status-terminé">Terminé</span>
+                            </div>
+                            <p class="project-description">Application mobile de coaching santé propulsée par l'IA, avec recommandations nutritionnelles et sportives personnalisées, analyse prédictive des tendances santé et parcours freemium à 3 niveaux.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">IA/ML</span>
+                                <span class="tech-tag">Mobile</span>
+                                <span class="tech-tag">Freemium</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt"></i> Février - Juin 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Projet 1 - Tisseo (Janvier 2026) -->
                     <div class="project-card" data-category="web">
                         <div class="project-gallery" data-project="tisseo">
@@ -450,6 +509,33 @@
         // Fonction pour afficher les détails du projet
         function showProjectDetails(projectId) {
             const projectData = {
+                healthai: {
+                    title: "HealthAI Coach - Application IA de santé personnalisée",
+                    description: "Conception et développement d'une application mobile de coaching santé propulsée par l'IA. Le projet combine recommandations intelligentes, analyse prédictive des tendances santé, API REST FastAPI et stratégie produit freemium à 3 niveaux (Premium / Premium+).",
+                    features: [
+                        "Moteur IA de recommandations nutritionnelles et sportives",
+                        "Personnalisation selon le profil utilisateur, les allergies, les données biométriques et les objectifs personnels",
+                        "Analyse prédictive pour anticiper les tendances santé et adapter les conseils en temps réel",
+                        "API REST avec FastAPI et traitement intelligent des données avec Python",
+                        "Parcours utilisateur freemium avec déblocage progressif des fonctionnalités IA",
+                        "Interface mobile moderne et intuitive centrée sur l'expérience utilisateur",
+                        "Organisation projet avec suivi fonctionnel et technique"
+                    ],
+                    technologies: ["FastAPI", "Python", "IA/ML", "API REST", "Mobile", "Architecture Freemium", "UX/UI"],
+                    date: "Février - Juin 2026",
+                    status: "Terminé",
+                    images: [
+                        "assets/images/Health_AI_Coach/dashboard_grille.png",
+                        "assets/images/Health_AI_Coach/dashboard_liste.png",
+                        "assets/images/Health_AI_Coach/dashboard_user.png",
+                        "assets/images/Health_AI_Coach/nutrition_user.png",
+                        "assets/images/Health_AI_Coach/entrainement_user.png",
+                        "assets/images/Health_AI_Coach/exercices.png",
+                        "assets/images/Health_AI_Coach/tendance_user.png",
+                        "assets/images/Health_AI_Coach/supabase-schema-tvfqosrefzpvekamitem.png",
+                        "assets/images/Health_AI_Coach/trello.png"
+                    ]
+                },
                 biblio: {
                     title: "BIBLIO - Système de Gestion de Bibliothèque",
                     description: "Un système complet de gestion de bibliothèque développé en Java, utilisant des patrons de conception avancés pour une architecture robuste et maintenable. Connecté à une base de données MySQL locale.",
